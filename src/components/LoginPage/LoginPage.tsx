@@ -7,6 +7,8 @@ import Button from "@mui/material/Button";
 import Label from "../Label/Label.tsx";
 import TextField from "../TextField/TextField.tsx";
 import { login } from "../../redux/reducers/authReducer.tsx";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -81,6 +83,11 @@ const LoginPage = () => {
               ) : (
                 <i className="bi bi-eye"></i>
               )}
+                <VisibilityOffIcon />
+              ) : (
+                <VisibilityIcon />
+              )}
+              :
             </Button>
           </fieldset>
 
