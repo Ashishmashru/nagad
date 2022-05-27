@@ -1,4 +1,4 @@
-import { Grid, Box, Tabs, Tab } from "@mui/material";
+import { Box, Tabs, Tab, Paper } from "@mui/material";
 import React, { useState } from "react";
 import BasicDetailsForm from "../BasicDetailsForm/BasicDetailsForm.tsx";
 import FilledButton from "../FormComponents/Buttons/FilledButton.tsx";
@@ -17,36 +17,31 @@ const SingleRegistration = () => {
   };
 
   return (
-    <Grid container direction="column">
-      <Grid item>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs value={0}>
-            <Tab label="Basic Details" />
-            <Tab label="Parent" />
-            <Tab label="Advanced Details" />
-            <Tab label="Documents" />
-            <Tab label="Preview" />
-          </Tabs>
-        </Box>
-      </Grid>
-      <Grid item>
-        <BasicDetailsForm pageNo={pageNo} />
-      </Grid>
+    <Paper elevation={3}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs value={0}>
+          <Tab label="Basic Details" />
+          <Tab label="Parent" />
+          <Tab label="Advanced Details" />
+          <Tab label="Documents" />
+          <Tab label="Preview" />
+        </Tabs>
+      </Box>
 
-      <Grid item>
-        <Box className="buttongroup" component="span">
-          <OutlinedButton
-            buttonName="BACK"
-            onClick={backPageHandler}
-            disabled={pageNo === 0}
-          />
-          <FilledButton
-            buttonName={pageNo === 0 ? "NEXT" : "SAVE & NEXT"}
-            onClick={nextPageHandler}
-          />
-        </Box>
-      </Grid>
-    </Grid>
+      <BasicDetailsForm pageNo={pageNo} />
+
+      <Box className="buttongroup" component="span">
+        <OutlinedButton
+          buttonName="BACK"
+          onClick={backPageHandler}
+          disabled={pageNo === 0}
+        />
+        <FilledButton
+          buttonName={pageNo === 0 ? "NEXT" : "SAVE & NEXT"}
+          onClick={nextPageHandler}
+        />
+      </Box>
+    </Paper>
   );
 };
 

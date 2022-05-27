@@ -86,11 +86,6 @@ const LoginPage = () => {
               ) : (
                 <VisibilityIcon color="secondary" />
               )}
-                <VisibilityOffIcon />
-              ) : (
-                <VisibilityIcon />
-              )}
-              :
             </Button>
           </fieldset>
 

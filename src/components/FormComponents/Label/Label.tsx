@@ -1,12 +1,12 @@
-import { InputLabel } from "@mui/material";
+import TextLabel from "../Label/LabelStyles.ts";
 import React from "react";
-import "./Label.scss";
+import "./LabelStyles.ts";
 
 const Label = ({ htmlFor, fieldName }) => {
   return (
-    <InputLabel className="label" htmlFor={htmlFor}>
+    <TextLabel className="label" htmlFor={htmlFor}>
       {fieldName}
-    </InputLabel>
+    </TextLabel>
   );
 };
 
