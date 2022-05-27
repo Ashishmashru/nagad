@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import DashSidebar from "../../components/DashSidebar/DashSidebar";
+import DashSidebar from "../../components/DashSidebar/DashSidebar.tsx";
 import { useAppSelector } from "../../redux/hooks.tsx";
 
 const Home = () => {
