@@ -28,7 +28,7 @@
   border: 2px solid black;
 }
 
-.password input {
+.password .textfield {
   width: 350px;
   height: 43px;
   border: none;
@@ -36,7 +36,7 @@
   padding: 10px;
 }
 
-.password input:focus {
+.password .textfield:focus {
   outline: none;
 }
 

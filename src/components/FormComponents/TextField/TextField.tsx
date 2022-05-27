@@ -1,18 +1,16 @@
+import { Input } from "@mui/material";
 import React from "react";
 import { useForm } from "react-hook-form";
-import "./TextField.scss";
+import "./TextField.css";
 
-const TextField = ({ type, id, placeholder, name, required }) => {
-  const { register } = useForm();
-
+const TextField = ({ type, id, placeholder, name }) => {
   return (
-    <input
+    <Input
       className="textfield"
       type={type}
       id={id}
       placeholder={placeholder}
       name={name}
-      {...register(name, { required })}
     />
   );
 };

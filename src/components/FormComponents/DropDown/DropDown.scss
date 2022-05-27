@@ -1,10 +1,13 @@
-.textfield {
+.dropdown {
   width: 445px;
   height: 48px;
   /* UI Properties */
   border: 1px solid #0000001f;
   border-radius: 8px;
   opacity: 1;
-  margin-bottom: 20px;
-  padding: 10px;
+
+  & div {
+    border: none;
+    height: 48px;
+  }
 }
