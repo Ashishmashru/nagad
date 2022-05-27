@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import DashSidebar from "../../components/DashSidebar/DashSidebar";
 import SingleRegistration from "../../components/SingleRegistration/SingleRegistration.tsx";
+import DashSidebar from "../../components/DashSidebar/DashSidebar.tsx";
 import { useAppSelector } from "../../redux/hooks.tsx";
 import { Grid } from "@mui/material";
 
