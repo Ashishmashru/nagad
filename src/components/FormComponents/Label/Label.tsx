@@ -1,11 +1,12 @@
+import { InputLabel } from "@mui/material";
 import React from "react";
 import "./Label.scss";
 
 const Label = ({ htmlFor, fieldName }) => {
   return (
-    <label className="label" htmlFor={htmlFor}>
+    <InputLabel className="label" htmlFor={htmlFor}>
       {fieldName}
-    </label>
+    </InputLabel>
   );
 };
 

@@ -4,9 +4,11 @@ import { useAppDispatch } from "../../redux/hooks.tsx";
 import "./LoginPage.css";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Label from "../Label/Label.tsx";
-import TextField from "../TextField/TextField.tsx";
+import Label from "../FormComponents/Label/Label.tsx";
+import TextField from "../FormComponents/TextField/TextField.tsx";
 import { login } from "../../redux/reducers/authReducer.tsx";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -14,9 +16,11 @@ const LoginPage = () => {
 
   const [passwordType, setPasswordType] = useState("password");
   const [passwordInput, setPasswordInput] = useState("");
+
   const handlePasswordChange = (e: any) => {
     setPasswordInput(e.target.value);
   };
+
   const togglePassword = () => {
     if (passwordType === "password") {
       setPasswordType("text");
@@ -24,6 +28,7 @@ const LoginPage = () => {
     }
     setPasswordType("password");
   };
+
   const loginHandler = () => {
     dispatch(login());
     navigate("/home");
@@ -76,10 +81,10 @@ const LoginPage = () => {
               value={passwordInput}
             />
             <Button onClick={togglePassword}>
-              {passwordType === "password" ? (
-                <i className="bi bi-eye-slash"></i>
+              {passwordType !== "password" ? (
+                <VisibilityOffIcon color="secondary" />
               ) : (
-                <i className="bi bi-eye"></i>
+                <VisibilityIcon color="secondary" />
               )}
             </Button>
           </fieldset>
