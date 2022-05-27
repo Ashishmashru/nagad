@@ -79,6 +79,10 @@ const LoginPage = () => {
             />
             <Button onClick={togglePassword}>
               {passwordType === "password" ? (
+                <i className="bi bi-eye-slash"></i>
+              ) : (
+                <i className="bi bi-eye"></i>
+              )}
                 <VisibilityOffIcon />
               ) : (
                 <VisibilityIcon />
