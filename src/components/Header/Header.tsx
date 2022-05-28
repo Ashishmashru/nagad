@@ -30,11 +30,14 @@ const Header = () => {
 
   return (
     <header className="header">
+      <div>
       <img
         className={auth ? "header_logo_auth" : "header_logo"}
         src={HeaderLogo}
         alt="Header Logo"
       />
+      </div>
+      <div>
       {!auth ? (
         <>
           <span
@@ -63,6 +66,7 @@ const Header = () => {
           </button>
         </>
       )}
+      </div>
     </header>
   );
 };

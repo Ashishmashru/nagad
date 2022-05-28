@@ -6,12 +6,13 @@
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 2px #0000000d;
   opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  align-items: center;
 }
 
 .header_logo {
-  position: absolute;
-  top: 15px;
-  left: 85px;
   width: 111px;
   height: 47px;
   background: transparent 0% 0% no-repeat padding-box;
@@ -29,9 +30,6 @@
 }
 
 .lang_en {
-  position: absolute;
-  top: 28px;
-  left: 1061px;
   width: 49px;
   height: 20px;
   /* UI Properties */
@@ -53,17 +51,11 @@
 }
 
 .lang_divider {
-  position: absolute;
-  left: 1126px;
-  top: 25px;
   height: 30px;
   color: #00000099;
 }
 
 .lang_bn {
-  position: absolute;
-  top: 28px;
-  left: 1146px;
   width: 49px;
   height: 20px;
   /* UI Properties */

@@ -1,11 +1,12 @@
 .container {
   display: flex;
-  padding: 7rem 10rem;
-  justify-content: space-between;
+  padding: 7rem 0rem;
+  justify-content: space-around;
   box-sizing: border-box;
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
+  flex-wrap: wrap;
 }
 
 .form {
@@ -91,4 +92,18 @@
   height: 48px;
   background: #0000001f 0% 0% no-repeat padding-box;
   border-radius: 8px;
+}
+
+
+ /* For responsive */
+
+ @media only screen and (max-width: 600px) {
+  .container {
+    justify-content: center;
+  }
+
+  .rightContainer{
+    text-align: center;
+  }
+  
 }
