@@ -1,4 +1,4 @@
-import { Box, Tabs, Tab, Paper } from "@mui/material";
+import { Box, Tabs, Tab, Paper, Card } from "@mui/material";
 import React, { useState } from "react";
 import BasicDetailsForm from "../BasicDetailsForm/BasicDetailsForm.tsx";
 import FilledButton from "../FormComponents/Buttons/FilledButton.tsx";
@@ -17,7 +17,7 @@ const SingleRegistration = () => {
   };
 
   return (
-    <Paper elevation={3}>
+    <Card elevation={3} className="singleRegistration">
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs value={0}>
           <Tab label="Basic Details" />
@@ -41,7 +41,7 @@ const SingleRegistration = () => {
           onClick={nextPageHandler}
         />
       </Box>
-    </Paper>
+    </Card>
   );
 };
 

@@ -1,82 +1,51 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React, { useState } from "react";
 import DropDown from "../FormComponents/DropDown/DropDown.tsx";
 import Label from "../FormComponents/Label/Label.tsx";
 import TextField from "../FormComponents/TextField/TextField.tsx";
 import "./BasicDetailsForm.css";
+import FormikSelector from "../FormComponents/CustomFormComponents/FormikSelector.tsx";
+import {
+  MerchantValidationCheck,
+  MerchantDetails,
+} from "../FormComponents/MerchantRegistrationForm/MerchantRegistrationFieldsNames.tsx";
 
 const BasicDetailsForm = ({ pageNo }) => {
   return (
     <Box component="form" autoComplete="off">
       {pageNo === 0 && (
         <Box component="span">
-          <Label htmlFor="phoneno" fieldName="Phone Number" />
-          <TextField
-            type="number"
-            id="phoneno"
-            placeholder="Enter Number"
-            name="phoneno"
-          />
-          <Label htmlFor="MNO" fieldName="Please Select MNO" />
-          <DropDown
-            options={[
-              "NID",
-              "Birth certificate",
-              "Passport",
-              "Driving License",
-            ]}
-          />
+          {MerchantValidationCheck.map(
+            ({ selector, label, placeholder, name, type }) => (
+              <Grid item xs={4} key={name}>
+                <FormikSelector
+                  selector={selector}
+                  label={label}
+                  placeholder={placeholder}
+                  name={name}
+                  type={type}
+                />
+              </Grid>
+            )
+          )}
         </Box>
       )}
 
       {pageNo === 1 && (
         <Box component="span">
-          <Label htmlFor="merchantName" fieldName="Merchant Name*" />
-          <TextField type="text" id="merchantName" name="merchantName" />
-          <Label htmlFor="email" fieldName="Email*" />
-          <TextField type="text" id="email" name="email" />
-          <Label
-            htmlFor="merchantCategory"
-            fieldName="Select Merchant Category*"
-          />
-          <DropDown options={[]} />
-          <Label htmlFor="gender" fieldName="Gender*" />
-          <DropDown options={["Male", "Female"]} />
-          <Label htmlFor="merchantType" fieldName="Select Merchant Type*" />
-          <DropDown options={[]} />
-          <Label htmlFor="organisationName" fieldName="Organisation Name*" />
-          <TextField
-            type="text"
-            id="organisationName"
-            name="organisationName"
-          />
-          <Label htmlFor="organisationType" fieldName="Organisation Type*" />
-          <DropDown options={[]} />
-          <Label
-            htmlFor="organisationaddress"
-            fieldName="Organisation Address*"
-          />
-          <TextField
-            type="text"
-            id="organisationaddress"
-            name="organisationaddress"
-          />
-          <Label
-            htmlFor="village/area"
-            fieldName="Type or Select Village/Area"
-          />
-          <DropDown options={[]} />
-          <Label
-            htmlFor="Thana/Upazila"
-            fieldName="Type or Select Thana/Upazila"
-          />
-          <DropDown options={[]} />
-          <Label htmlFor="division" fieldName="Type or Select Division" />
-          <DropDown options={[]} />
-          <Label htmlFor="postoffice" fieldName="Post Office" />
-          <TextField type="text" id="postoffice" name="postoffice" />
-          <Label htmlFor="postcode" fieldName="Post code*" />
-          <TextField type="text" id="postcode" name="postcode" />
+          {MerchantDetails.map(
+            ({ selector, label, placeholder, name, type }) => (
+              <Grid item xs={4} key={name}>
+                <FormikSelector
+                  selector={selector}
+                  label={label}
+                  placeholder={placeholder}
+                  name={name}
+                  type={type}
+                />
+              </Grid>
+            )
+          )}
         </Box>
       )}
 
