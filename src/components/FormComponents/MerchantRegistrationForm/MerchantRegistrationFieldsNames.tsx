@@ -1,0 +1,111 @@
+import React from "react";
+
+export const MerchantValidationCheck = [
+    {
+      selector: 'textfield',
+      label: 'Phone Number',
+      type: 'text',
+      placeholder: 'Enter Number',
+      name: 'MerchantPhoneNo',
+      isOnlyNumber: true,
+      isReadOnly: false,
+      disabled: false,
+    },
+    {    
+    selector: 'combobox',
+    label: 'Please select MNO',
+    type: 'text',
+    placeholder: 'Please Select',
+    name: 'MerchantMNO',
+    options: 'Opt. list',
+    }
+];
+
+export const MerchantBasicDetails = [
+    {
+        selector: 'textfield',
+        label: 'Phone Number',
+        type: 'text',
+        placeholder: 'Enter Number',
+        name: 'MerchantPhoneNo',
+        isOnlyNumber: true,
+        isReadOnly: false,
+        disabled: false,
+      },
+      {    
+      selector: 'combobox',
+      label: 'Please select MNO',
+      type: 'text',
+      placeholder: 'Please Select',
+      name: 'MerchantMNO',
+      options: 'Opt. list',
+      },{
+        selector: 'textfield',
+        label: 'Phone Number',
+        type: 'text',
+        placeholder: 'Enter Number',
+        name: 'MerchantPhoneNo',
+        isOnlyNumber: true,
+        isReadOnly: false,
+        disabled: false,
+      },
+      {    
+      selector: 'combobox',
+      label: 'Please select MNO',
+      type: 'text',
+      placeholder: 'Please Select',
+      name: 'MerchantMNO',
+      options: 'Opt. list',
+      },{
+        selector: 'textfield',
+        label: 'Phone Number',
+        type: 'text',
+        placeholder: 'Enter Number',
+        name: 'MerchantPhoneNo',
+        isOnlyNumber: true,
+        isReadOnly: false,
+        disabled: false,
+      },
+      {    
+      selector: 'combobox',
+      label: 'Please select MNO',
+      type: 'text',
+      placeholder: 'Please Select',
+      name: 'MerchantMNO',
+      options: 'Opt. list',
+      },{
+        selector: 'textfield',
+        label: 'Phone Number',
+        type: 'text',
+        placeholder: 'Enter Number',
+        name: 'MerchantPhoneNo',
+        isOnlyNumber: true,
+        isReadOnly: false,
+        disabled: false,
+      },
+      {    
+      selector: 'combobox',
+      label: 'Please select MNO',
+      type: 'text',
+      placeholder: 'Please Select',
+      name: 'MerchantMNO',
+      options: 'Opt. list',
+      },{
+        selector: 'textfield',
+        label: 'Phone Number',
+        type: 'text',
+        placeholder: 'Enter Number',
+        name: 'MerchantPhoneNo',
+        isOnlyNumber: true,
+        isReadOnly: false,
+        disabled: false,
+      },
+      {    
+      selector: 'combobox',
+      label: 'Please select MNO',
+      type: 'text',
+      placeholder: 'Please Select',
+      name: 'MerchantMNO',
+      options: 'Opt. list',
+      }
+]
