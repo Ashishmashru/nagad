@@ -99,11 +99,19 @@
 
  @media only screen and (max-width: 600px) {
   .container {
-    justify-content: center;
+    display: block;
+    padding: 20px 10px ;
   }
 
   .rightContainer{
     text-align: center;
+  }
+  .password{
+    width: 100% !important;
+  }
+
+  input, .loginbutton, .para{
+    width:100% !important
   }
   
 }

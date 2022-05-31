@@ -64,6 +64,7 @@ const LoginPage = () => {
             placeholder="Enter UserId/ Phone No./ Email"
             name="userId"
             required={true}
+            className="WidthFix"
           />
 
           <Label id="password" fieldName="Password" />
